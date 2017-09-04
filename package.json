@@ -1,0 +1,14 @@
+{
+  "name": "docker-aws-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:tecbeast42/docker-aws-demo.git",
+  "author": "Tobias Kriebisch <t.kriebisch@tecbeast.de>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}

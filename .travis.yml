@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t tecbeast/docker-aws-demo .
+
+script:
+  - echo "Do all the tests"
+
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push tecbeast/docker-aws-demo
