@@ -16,9 +16,9 @@ after_success:
   - docker --version  # document the version travis is using
   - pip install --user awscli # install aws cli w/o sudo
   - export PATH=$PATH:$HOME/.local/bin # put aws in the path
-  - eval $(aws ecr get-login --no-include-email --region us-east-2) #needs AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY envvars
-  - docker tag tecbeast/docker-aws-demo:latest 114300403495.dkr.ecr.us-east-2.amazonaws.com/testing:latest
-  - docker push 114300403495.dkr.ecr.us-east-2.amazonaws.com/testing:latest
+  - eval $(aws ecr get-login --no-include-email --region eu-central-1) #needs AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY envvars
+  - docker tag tecbeast/docker-aws-demo:latest 114300403495.dkr.ecr.eu-central-1.amazonaws.com/default:latest
+  - docker push 114300403495.dkr.ecr.eu-central-1.amazonaws.com/default:latest
   ##########################
   ## Deploy to Docker Hub ##
   ##########################
