@@ -1,7 +1,7 @@
 FROM node:alpine
 
 COPY . /home/node
-EXPOSE 3000
+EXPOSE 80
 WORKDIR /home/node
 
 CMD ["yarn", "start"]
